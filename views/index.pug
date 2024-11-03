@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/style.css")
+        link(rel="shortcut icon",  type="image/png", href="/images/logo/favicon.png")
+        title #{title}
+    body 
+        nav 
+            .logo 
+                img#logo(src="/images/logo/logo.png", alt="logo")
+            form#search
+                input(type="text" placeholder="Search over 1,000,000 recipes")
+                input#submit(type="submit", value="Search")
+            button * Add Recipe
+            button Bookmarks
+
+        section
+            .intro 
+                img(src="", alt="intro img", srcset="")
+                h1 Cauliflower Pizza Crust (with BBQ Chicken Pizza)
+            .content 
+                .timer
+                    p 75 minutes
+                .servings
+                    p 4 servings
+                .bookmark 
+                    button icon 
+
+            .ingredients
+                h2.ingredients__header Recipe ingredients
+                ul
+                    li 1 medium head cauliflower cut into florets 
+                    li 1/2 cup mozzarella shredded 
+                    li Salt and pepper to taste 
+                    li 1/2 cup barbecue sauce 
+                    li Red onion to taste thinly sliced
+                    li 1 egg 
+                    li 1 tsp oregano or italian seasoning blend 
+                    li Fresh cilantro to taste 
+        section 
+            .recipeSummary
+                img(src="", alt="Food img", srcset="")
+                h3 Viggie Pizza 
+                h4 All recipes
+            .recipeSummary
+                img(src="", alt="Food img", srcset="")
+                h3 Viggie Pizza 
+                h4 All recipes
+            .recipeSummary
+                img(src="", alt="Food img", srcset="")
+                h3 Viggie Pizza 
+                h4 All recipes
+            .recipeSummary
+                img(src="", alt="Food img", srcset="")
+                h3 Viggie Pizza 
+                h4 All recipes
+            
+            .pages 
+                button &#8592; page 1
+                button Page 2 &#8594; 
+    
+    script(type="module", src="./script.js") 
