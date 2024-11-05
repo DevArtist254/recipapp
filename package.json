@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "style": "sass public/sass/main.scss public/style.css",
-    "script": "webpack --config webpack.config.js"
+    "server": "nodemon server.js",
+    "style": "sass -w public/sass/main.scss public/style.css",
+    "script": "webpack --config webpack.config.js",
+    "start": "concurrently \"npm run style\" \"npm run script\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "sass": "^1.80.6"
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
   }

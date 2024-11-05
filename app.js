@@ -14,7 +14,7 @@ app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   res.setHeader(
     "Content-Security-Policy",
-    "default-src script-src 'self' data https://apis.google.com "
+    "default-src script-src 'self' data https://apis.google.com 'unsafe-eval'"
   );
   next();
 });

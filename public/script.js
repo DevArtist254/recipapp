@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _control__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./control */ \"./public/js/control.js\");\n\n\nconst btn = document.querySelector(\"#logo\");\n\n(0,_control__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://fork-rc/./public/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _control__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./control */ \"./public/js/control.js\");\n\n(0,_control__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\nconst btnSearch = document.querySelector(\"#submit\");\n\nbtnSearch.addEventListener(\"click\", (e) => {\n    e.preventDefault();\n\n    console.log(\"Hello Kevin\");\n})\n\n//# sourceURL=webpack://fork-rc/./public/js/index.js?");
 
 /***/ })
 

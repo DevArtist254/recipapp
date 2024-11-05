@@ -1,5 +1,10 @@
 import named from "./control";
-
-const btn = document.querySelector("#logo");
-
 named();
+
+const btnSearch = document.querySelector("#submit");
+
+btnSearch.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    console.log("Hello Kevin");
+})
