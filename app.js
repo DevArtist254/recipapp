@@ -2,8 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 
+const viewRouter = require("./routes/viewRoute");
+const recipeRouter = require("./routes/recipeRoute");
+
 const app = express();
 
+app.use(cors());
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -20,8 +24,7 @@ app.use((req, res, next) => {
 });
 
 
-app.get('/', (req, res) => {
-    res.render('index', { title: 'hey', message: 'Hello world'});
-})
+app.use('/', viewRouter);
+app.use('/recipes', recipeRouter);
 
 module.exports = app;
