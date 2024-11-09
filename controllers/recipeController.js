@@ -1,14 +1,28 @@
-exports.getRecipes = (req, res) => {
-  const rs = req.query.name;
+const Recipe = require("../model/recipeModel");
 
-  res.status(200).json({
-    status: "success",
-    data: {
-      message: rs,
-    },
-  });
+exports.getRecipes = async (req, res) => {
+  try {
+    const data = await Recipe.find({name: req.query.name});
+
+    res.status(200).json({
+      status: "success",
+      size: data.length,
+      data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-exports.postRecipe = (req, res) => {
-    
-}
+exports.postRecipe = async (req, res) => {
+  try {
+    const data = await Recipe.create(req.body);
+
+    res.status(200).json({
+      success: true,
+      data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
